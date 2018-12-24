@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Player New</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-12" style="background: #000;" id="videox">
+          <!-- 21:9 aspect ratio -->
+          <div id="video-container" class="embed-responsive embed-responsive-16by9">
+            <!-- Video -->
+            <video id="video" class="embed-responsive-item">        
+              <source src="./xs/monster_mosume/mms01.mp4" type="video/mp4">
+              <p>
+                Your browser doesn't support HTML5 video.
+                <a href="./xs/monster_mosume/mms01.mp4">Download</a> the video instead.
+              </p>
+            </video>
+          </div>
+        </div>
+        <!-- Video Controls -->
+        <div id="controlx" class="col-12" style="background: rgba(0,0,0,0.5); padding: 10px 2px 0px 2px; z-index:2147483647; margin-top:-60px; max-height: 60px!important;">
+            <div id="video-controls" class="row" style="margin-bottom: 0px !important; padding: 0px !important;">
+                <div class="col-1"> 
+                  <button type="button" class="btn" id="play-pause"><i class="material-icons">play_arrow</i></button>
+                </div>
+                <div class="col-1"> 
+                  <button type="button" class="btn" id="next-video"><i class="material-icons">skip_next</i></button>
+                </div>
+                <div class="col-6">
+                  <input type="range" id="seek-bar" value="0" class="inputx">
+                </div>
+                <div class="col-1">
+                  <button type="button" class="btn" id="mute"><i class="material-icons">volume_up</i></button>
+                </div>
+                <div class="col-2">
+                  <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1" class="inputx">
+                </div>
+                <div class="col-1">
+                  <button type="button" class="btn" id="full-screen"><i class="material-icons">fullscreen</i></button>
+                </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <style>
+    #controlx{
+      display:none;
+      -webkit-transition: 5s; /* Safari */
+      -moz-transition: 5s; /* Firefox */
+      transition: 5s;
+    }
+    #videox:hover + #controlx{
+      display:block;
+      -webkit-transition: 5s; /* Safari */
+      -moz-transition: 5s; /* Firefox */
+      transition: 5s;
+      
+    }
+    #controlx:hover{
+      display:block;
+      -webkit-transition: 5s; /* Safari */
+      -moz-transition: 5s; /* Firefox */
+      transition: 5s;
+    }
+    .inputx{
+      margin: 10px 0!important;
+      border: none!important;
+      outline: none!important;
+      outline-offset: 0!important;
+    }
+    .inputx:active,.inputx:focus{      
+      border: none!important;
+      outline: none!important;
+      outline-offset: 0!important;
+    }
+    </style>
+    
+
+    <script src="./__libs/js/_player-test.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+			$(document).ready(function(){
+    			$('.sidenav').sidenav();
+				  $('select').formSelect();
+				  $('.slider').slider();
+				  $('.materialboxed').materialbox();
+  			});
+		</script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
